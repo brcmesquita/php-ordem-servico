@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include_once 'utils/isConnected.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
     <h1 class="text-center mt-5">Loja de Eletrônicos</h1>
     <div class="row justify-content-center mt-5">
 
-      <?php include_once 'views/menu.php'; ?>
+      <?php include_once 'views/menu-logged-in.php'; ?>
 
       <h2 class="mb-3">Ordens de Serviço</h2>
       <table class="table">
