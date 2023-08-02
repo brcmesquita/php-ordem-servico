@@ -1,26 +1,34 @@
-<?php
-require_once 'utils/router.php';
+<?php ?>
 
-// Defina suas rotas aqui
-$router = new Router();
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-$router->get('/', function () {
-  // Lógica para exibir a página inicial (home.php)
-  include_once 'pages/home.php';
-});
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem de Seviço</title>
+  <?php include_once 'utils/dependencias.php'; ?>
+</head>
 
-$router->get('/login', function () {
-  // Lógica para exibir a página de login (login.php)
-  include_once 'pages/login.php';
-});
+<body>
+  <?php include_once 'views/menu-logged-out.php'; ?>
 
-$router->post('/login', function () {
-  // Lógica para processar o formulário de login e autenticar o usuário
-  include_once 'actions/login_action.php';
-});
+  <section class="hero">
+    <div class="container mt-5">
+      <h1 class="text-center">Seja bem vindo ao sistema de Ordem de Serviço</h1>
+    </div>
+  </section>
 
-// Outras rotas...
+  <section class="conteudo">
+    <div class="container mt-5">
+      <p class="text-center">
+        Para iniciar, basta clicar em <a href="login.php">Login</a>.<br>
+        Ainda não tem uma conta? Clique em <a href="cadastro.php">Cadastro</a>
+      </p>
+    </div>
+  </section>
 
-// Executa o roteador para processar a rota atual
-$router->run();
-?>
+  <?php include_once 'utils/inject_js.php'; ?>
+</body>
+
+</html>

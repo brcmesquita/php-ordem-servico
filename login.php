@@ -7,6 +7,7 @@
 </head>
 
 <body>
+  <?php include_once 'views/menu.php'; ?>
   <div class="container">
     <h1 class="text-center mt-5">Loja de Eletrônicos</h1>
     <div class="row justify-content-center mt-5">
